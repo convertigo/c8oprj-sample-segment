@@ -59,7 +59,7 @@ Segment container and segment buttons usage
 <table>
 <tr>
 <td><img src="doc/segment1.png" /></td>
-<td><img src="doc/segment2.png" /></td>s
+<td><img src="doc/segment2.png" /></td>
 </tr>
 </table>
 
