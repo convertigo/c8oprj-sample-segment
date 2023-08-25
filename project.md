@@ -39,5 +39,11 @@ Segment container and segment buttons usage
 <li>All the different page content is added to the different SwitchCase</li>
 <li>By clicking the Segment buttons, it will switch between the different SwitchCase components.</li>
 </ul>
+<table>
+<tr>
+<td><img src="doc/segment1.png" /></td>
+<td><img src="doc/segment2.png" /></td>s
+</tr>
+</table>
 </p></blockquote></details>
 </p></blockquote></details>
