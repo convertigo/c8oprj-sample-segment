@@ -1,0 +1,162 @@
+↑isRoot: true
+comment: |
+  <ul>
+  <li>In the <b>pageDidEnter</b> event, a local variable '<b>option</b>' is set with value 1.</li>
+  <li>In the page Header, a <b>Segment container</b> bound to the local variable 'option' is added.</li>
+  <li>2 <b>Segment buttons</b> are added with <b>value</b> property set respectively to 1 and 2.</li>
+  <li>In the page Content, a <b>Switch Directive</b> is set with 2 <b>SwitchCase</b> whose <b>Directive expression</b> properties are set respectively to 1 and 2 (same as Segment buttons)</li>
+  <li>All the different page content is added to the different SwitchCase</li>
+  <li>By clicking the Segment buttons, it will switch between the different SwitchCase components.</li>
+  </ul>
+preloadPriority: high
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+        
+segment: path-to-xfirst
+title: First page
+↓Header [ngx.components.UIDynamicElement-1491634212350]: 
+  beanData: '{"ionBean":"Header"}'
+  comment: Page header
+  tagName: ion-header
+  ↓ToolBar [ngx.components.UIDynamicElement-1491634231108]: 
+    beanData: '{"ionBean":"ToolBar","IonColor":"plain:primary"}'
+    tagName: ion-toolbar
+    ↓ButtonSet1 [ngx.components.UIDynamicElement-1588171103814]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'
+      tagName: ion-buttons
+      ↓BackButton [ngx.components.UIDynamicElement-1643993281257]: 
+        beanData: '{"ionBean":"BackButton"}'
+        tagName: ion-back-button
+      ↓MenuButton [ngx.components.UIDynamicElement-1588172846908]: 
+        beanData: '{"ionBean":"MenuButton"}'
+        tagName: ion-menu-button
+    ↓BarTitle [ngx.components.UIDynamicElement-1491634265317]: 
+      beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
+      ↓SegmentContainer [ngx.components.UIDynamicElement-1692805804860]: 
+        beanData: |
+          '{
+           "ionBean": "Segment",
+           "ControlName": "plain:name1692805804860",
+           "DoubleBinding": "source:{\"filter\":\"Local\",\"project\":\"DemoMLyon\",\"input\":\"\",\"model\":{\"data\":[{\"localObject\":\"local\"}],\"path\":\"?.option\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+          }'
+        tagName: ion-segment
+        ↓SegmentButton [ngx.components.UIDynamicElement-1692805811325]: 
+          beanData: '{"ionBean":"SegmentButton","Value":"script:1"}'
+          tagName: ion-segment-button
+          ↓some_text [ngx.components.UIText-1692805824883]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:SEGMENT 1
+        ↓SegmentButton1 [ngx.components.UIDynamicElement-1692805814563]: 
+          beanData: '{"ionBean":"SegmentButton","Value":"script:2"}'
+          tagName: ion-segment-button
+          ↓some_text [ngx.components.UIText-1692805830810]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:SEGMENT 2
+↓Content [ngx.components.UIDynamicElement-1489674805352]: 
+  beanData: '{"ionBean":"Content"}'
+  comment: Page content
+  tagName: ion-content
+  ↓tag [ngx.components.UIControlDirective-1692805999073]: 
+    directiveName: Switch
+    directiveSource: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Local","project":"sample_segment","input":"","model":{"data":[{"localObject":"local"}],"path":"?.option","prefix":"","suffix":"","custom":"","useCustom":false}}
+    ↓tag [ngx.components.UIControlDirective-1692806024711]: 
+      directiveExpression: 1
+      directiveName: SwitchCase
+      ↓Heading [ngx.components.UIDynamicTag-1692806070406]: 
+        beanData: '{"ionBean":"Heading"}'
+        tagName: h1
+        ↓some_text [ngx.components.UIText-1692806070405]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:This is
+        ↓Break [ngx.components.UIDynamicElement-1692977438519]: 
+          beanData: '{"ionBean":"Break"}'
+          selfClose: true
+          tagName: br
+        ↓some_text1 [ngx.components.UIText-1692977382895]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:SEGMENT 1
+        ↓Break1 [ngx.components.UIDynamicElement-1692977445975]: 
+          beanData: '{"ionBean":"Break"}'
+          selfClose: true
+          tagName: br
+        ↓some_text2 [ngx.components.UIText-1692977384609]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:content
+        ↓FormatLayout [ngx.components.UIDynamicAttr-1692977467728]: 
+          beanData: '{"ionBean":"FormatLayout","TextAlignment":"plain:ion-text-center"}'
+          selfClose: false
+          tagName: FormatLayout
+    ↓tag1 [ngx.components.UIControlDirective-1692806046130]: 
+      directiveExpression: 2
+      directiveName: SwitchCase
+      ↓Heading [ngx.components.UIDynamicTag-1692806088294]: 
+        beanData: '{"ionBean":"Heading"}'
+        tagName: h1
+        ↓some_text [ngx.components.UIText-1692806088297]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:This is SEGMENT 2 content
+↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
+  beanData: '{"ionBean":"Footer"}'
+  comment: Page footer
+  tagName: ion-footer
+  ↓ToolBar [ngx.components.UIDynamicElement-1491634317538]: 
+    beanData: '{"ionBean":"ToolBar","IonColor":"plain:primary"}'
+    tagName: ion-toolbar
+    ↓ButtonSet [ngx.components.UIDynamicElement-1588170246138]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'
+      tagName: ion-buttons
+      ↓Button1 [ngx.components.UIDynamicElement-1491634332730]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: ion-button
+        ↓Text [ngx.components.UIText-1491634340354]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 1
+    ↓ButtonSet1 [ngx.components.UIDynamicElement-1588170269871]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
+      tagName: ion-buttons
+      ↓Button2 [ngx.components.UIDynamicElement-1491634376874]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: ion-button
+        ↓Text [ngx.components.UIText-1491634383107]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 2
+↓PageEvent [ngx.components.UIPageEvent-1692805883779]: 
+  ↓SetLocal [ngx.components.UIDynamicAction-1692805891342]: 
+    beanData: |
+      '{
+       "ionBean": "SetLocalAction",
+       "Property": "plain:option",
+       "Value": "script:1"
+      }'
+    tagName: SetLocal
